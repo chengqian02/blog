@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2018 | 成.Home</title>
+  <title>hexo+github_page | 成.Home</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -167,78 +167,113 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/10/01/hexo+github/">hexo+github_page</a></h4>
-                            
-                            <p><time datetime="2018-10-01T12:51:20.802Z"><a href="/2018/10/01/hexo+github/">2018-10-01</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/09/28/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2018-09-28T13:09:56.518Z"><a href="/2018/09/28/hello-world/">2018-09-28</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-10-01T12:51:20.802Z" itemprop="datePublished">
+          2018-10-01
+      </time>
+    
+</span>
+                <h1>hexo+github_page</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="Hexo-是一个快速、简洁且高效的博客框架，可托管于github-pages，可免去维护服务器的麻烦，博主们可更专注于内容的创作。"><a href="#Hexo-是一个快速、简洁且高效的博客框架，可托管于github-pages，可免去维护服务器的麻烦，博主们可更专注于内容的创作。" class="headerlink" title="Hexo 是一个快速、简洁且高效的博客框架，可托管于github pages，可免去维护服务器的麻烦，博主们可更专注于内容的创作。"></a>Hexo 是一个快速、简洁且高效的博客框架，可托管于github pages，可免去维护服务器的麻烦，博主们可更专注于内容的创作。</h2><h2 id="使用Hexo-github搭建属于自己的博客"><a href="#使用Hexo-github搭建属于自己的博客" class="headerlink" title="使用Hexo+github搭建属于自己的博客"></a>使用Hexo+github搭建属于自己的博客</h2><h2 id="搭建步骤："><a href="#搭建步骤：" class="headerlink" title="搭建步骤："></a>搭建步骤：</h2><h3 id="1-根据-Hexo官网-步骤安装-git，node-js"><a href="#1-根据-Hexo官网-步骤安装-git，node-js" class="headerlink" title="1. 根据 Hexo官网 步骤安装 git，node.js"></a>1. 根据 Hexo官网 步骤安装 git，node.js</h3><h3 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2. 安装hexo"></a>2. 安装hexo</h3><p>&emsp;&emsp;下载地址：<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a>；</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>安装 Hexo 完成后，新建一个博客的主目录，然后执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>新建完成之后该目录的目录结构如下:<br>&emsp;&emsp;_config.yml     # 网站的 配置 信息<br>&emsp;&emsp;package.json          # 应用程序的信息<br>&emsp;&emsp;scaffolds             # 模板文件夹<br>&emsp;&emsp;source                # 博文源文件目录<br>&emsp;&emsp;_drafts               # 草稿文件夹<br>&emsp;&emsp;_posts                # 博文文件夹<br>&emsp;&emsp;themes                # 主题文件夹</p>
+<p>&emsp;再执行以下命令，访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 即可快速体验Hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p><img src="E:\MEblog\hexo\source\img\hexo.png" alt="Alt text"></p>
+<h3 id="3-根据-Hexo文档-对网站做一些简单的配置，然后修改主题为-3-hexo"><a href="#3-根据-Hexo文档-对网站做一些简单的配置，然后修改主题为-3-hexo" class="headerlink" title="3. 根据 Hexo文档 对网站做一些简单的配置，然后修改主题为 3-hexo"></a>3. 根据 Hexo文档 对网站做一些简单的配置，然后修改主题为 3-hexo</h3><p>&emsp;安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo</span><br></pre></td></tr></table></figure>
+<p>&emsp;修改hexo根目录的_config.yml中的theme参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: 3-hexo</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后执行 hexo clean &amp; hexo g &amp; hexo s 即可看到效果</p>
+<p>&emsp;&emsp;更多的主题配置可见 <a href="http://yelog.org/2017/03/23/3-hexo-instruction/" target="_blank" rel="noopener">3-hexo使用说明</a></p>
+<h2 id="4-配置-github-pages"><a href="#4-配置-github-pages" class="headerlink" title="4. 配置 github pages"></a>4. 配置 github pages</h2><p>&emsp;到github上创建一个新的空仓库，名字格式为 账户名.github.io，譬如我的github账户名是 whirlys，所以我的github pages 仓库的名字应为 whirlys.github.io</p>
+<p>&emsp;安装插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后配置 Hexo根目录的 _config.yml，xxx为你的用户名，注意还需要加入你的 github 用户名和密码，不然后面推送失败（但是上传代码时注意防止密码泄露）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">&amp;emsp;<span class="built_in">type</span>: git</span><br><span class="line">&amp;emsp;repo: https://[github用户名]:[github密码]@github.com/xxx/xxx.github.io.git</span><br><span class="line">&amp;emsp;branch: master</span><br></pre></td></tr></table></figure>
+<p>&emsp;如果你是第一次配置 github 远程仓库，你还须将你电脑的ssh key 配置到 github 上，具体可参考 git远程仓库</p>
+<p>&emsp;推送Hexo到github</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="5-其他的配置"><a href="#5-其他的配置" class="headerlink" title="5. 其他的配置"></a>5. 其他的配置</h2><p>&emsp;&emsp;接入评论，3-hexo主题中已经集成了多种评论，我选择了gitment，具体的配置参考 完美替代多说-gitment，如果gitment遇到问题，譬如报Error：validation failed异常，可参考 添加Gitment评论系统踩过的坑 以及 gitment issue上的解决方法</p>
+<p>&emsp;&emsp;使用七牛云图床，参考 使用七牛为Hexo存储图片 和 Hexo七牛同步插件</p>
+<p>&emsp;&emsp;代码高亮，字数统计，参考 Hexo主题3-hexo</p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2018/09/28/hello-world/">
+        Hello World →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
