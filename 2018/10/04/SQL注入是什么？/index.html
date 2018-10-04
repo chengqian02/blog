@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2018 | 成.Home</title>
+  <title>成.Home</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -167,87 +167,100 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/10/04/SQL注入是什么？/"></a></h4>
-                            
-                            <p><time datetime="2018-10-04T15:12:02.582Z"><a href="/2018/10/04/SQL注入是什么？/">2018-10-04</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/10/01/hexo+github/">hexo+github_page</a></h4>
-                            
-                            <p><time datetime="2018-10-01T12:51:20.802Z"><a href="/2018/10/01/hexo+github/">2018-10-01</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/09/28/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2018-09-28T13:09:56.518Z"><a href="/2018/09/28/hello-world/">2018-09-28</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-10-04T15:12:02.582Z" itemprop="datePublished">
+          2018-10-04
+      </time>
+    
+</span>
+                <h1></h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p><center style="color: red;">SQL注入是什么？</center><br>什么是SQL注入<br>原理分析：假设如下URL存在漏洞<br><a href="http://www.xxx.com/xx.asp?id=123" target="_blank" rel="noopener">http://www.xxx.com/xx.asp?id=123</a><br><br><br></p>
+<p>构造数据库原型：<br>select * from table_name where id=1</p>
+<p>那么提交：<br><a href="http://www.xxx.com/xx.asp?id=123" target="_blank" rel="noopener">http://www.xxx.com/xx.asp?id=123</a> and [查询语句]<br>select * from table_name where username=‘or’=‘or’ And pass=‘or’=’or’</p>
+<p>这样，如果页面和id=123返回相同的结果，就说明附加查询条件成立，如果不同，就说明不成立。</p>
+<p>SQL注入判断方法</p>
+<p>利用该方法，可以修改网站的商品价格。使用示例:</p>
+<p>第一步先把IE菜单=&gt;工具=&gt;Internet选项=&gt;高级=&gt;显示友好 HTTP 错误信息前面的勾去掉。否则，不论服务器返回什么错误，IE都只显示为HTTP 500服务器错误，不能获得更多的提示信息。</p>
+<p>简单判定有无漏洞： 粗略型：提交单引号’<br>逻辑型（数字型注入）：and 1=1 / and 1=2<br>逻辑型（字符型注入）：’ and ‘1’=’1 / ‘ and ‘1’=’2<br>逻辑型（搜索型注入）： 关键字%’ and 1=1 and ‘%’=’% / 关键字%’ and 1=2 and ‘%’=’%<br>危害：获取数据库信息，脱裤，获取服务器权限，植入webshell，获取服务器后门，读取服务器敏感文件等。</p>
+<p>常见SQL注入工具</p>
+<p>目前流行的注入工具有：SQLMap、Pangolin（穿山甲）、Havij、阿D等。</p>
+<p>SQLMap下载地址：<a href="http://sqlmap.org/" target="_blank" rel="noopener">http://sqlmap.org/</a><br>Pangolin下载地址：<a href="http://www.pc0359.cn/downinfo/62741.html" target="_blank" rel="noopener">http://www.pc0359.cn/downinfo/62741.html</a><br>Havij下载地址：<a href="http://www.pc0359.cn/downinfo/62761.html" target="_blank" rel="noopener">http://www.pc0359.cn/downinfo/62761.html</a><br>阿D下载地址：<a href="http://dl.pconline.com.cn/download/456021.html" target="_blank" rel="noopener">http://dl.pconline.com.cn/download/456021.html</a></p>
+<p>以上软件安全不保证，测试请在虚拟机进行。</p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p></p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2018/10/01/hexo+github/">
+        hexo+github_page →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
