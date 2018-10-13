@@ -182,7 +182,11 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p><center style="color: red;">SQL注入是什么？</center><br>什么是SQL注入<br>原理分析：假设如下URL存在漏洞<br><a href="http://www.xxx.com/xx.asp?id=123" target="_blank" rel="noopener">http://www.xxx.com/xx.asp?id=123</a><br><br><br></p>
+      		<hr>
+<h2 id="title-SQL注入是什么？"><a href="#title-SQL注入是什么？" class="headerlink" title="title:SQL注入是什么？"></a>title:SQL注入是什么？</h2><p>title</p>
+<center style="color: red; ">什么是SQL注入</center>
+
+<p>&lt;原理分析：假设如下URL存在漏洞<br><a href="http://www.xxx.com/xx.asp?id=123" target="_blank" rel="noopener">http://www.xxx.com/xx.asp?id=123</a><br><br><br></p>
 <p>构造数据库原型：<br>select * from table_name where id=1</p>
 <p>那么提交：<br><a href="http://www.xxx.com/xx.asp?id=123" target="_blank" rel="noopener">http://www.xxx.com/xx.asp?id=123</a> and [查询语句]<br>select * from table_name where username=‘or’=‘or’ And pass=‘or’=’or’</p>
 <p>这样，如果页面和id=123返回相同的结果，就说明附加查询条件成立，如果不同，就说明不成立。</p>
