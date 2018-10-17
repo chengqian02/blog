@@ -88,9 +88,9 @@
 <meta property="og:description" content="Hexo 是一个快速、简洁且高效的博客框架，可托管于github pages，可免去维护服务器的麻烦，博主们可更专注于内容的创作。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://pgnfycdbr.bkt.clouddn.com/images/git+githubpage_hexo.png?imageView2/2/w/450">
-<meta property="og:image" content="http://pgnfycdbr.bkt.clouddn.com/images/git+githubpage_sshcreate.png?imageView2/2/w/450">
+<meta property="og:image" content="http://pgnfycdbr.bkt.clouddn.com/images/git+githubpage_sshcreate.png">
 <meta property="og:image" content="http://pgnfycdbr.bkt.clouddn.com/images/git+githubpage_sshconfig.png?imageView2/2/w/450">
-<meta property="og:updated_time" content="2018-10-17T15:54:04.434Z">
+<meta property="og:updated_time" content="2018-10-17T16:04:01.829Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+github_page搭建博客">
 <meta name="twitter:description" content="Hexo 是一个快速、简洁且高效的博客框架，可托管于github pages，可免去维护服务器的麻烦，博主们可更专注于内容的创作。">
@@ -345,7 +345,7 @@
 <h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p>&emsp;&emsp;上传文件需要配置ssh key，不然无法上传。<br>&emsp;&emsp;首先先检查一下本地是否已经存在ssh key,在Git Bash输入以下指令（任意位置点击鼠标右键），检查是否已经存在了SSH keys。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;如果不存在就没有关系，如果存在的话，直接删除.ssh文件夹里面所有文件： </p>
-<img title="git+githubpage_sshcreate" alt="git+githubpage_sshcreate" src="http://pgnfycdbr.bkt.clouddn.com/images/git+githubpage_sshcreate.png?imageView2/2/w/450">
+<img src="http://pgnfycdbr.bkt.clouddn.com/images/git+githubpage_sshcreate.png">
 <p>&emsp;&emsp;设置name和emai</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"&lt;your name&gt;"</span></span><br><span class="line">git config --global user.email <span class="string">"&lt;your email&gt;"</span></span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;需要注意的是这里的name是随意的，邮箱是你的联系邮箱，与github上的邮箱没有什么联系（不过我都是同一个邮箱）。</p>
