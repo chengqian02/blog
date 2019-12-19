@@ -49,9 +49,9 @@
 </script>
 
   <meta name="description" content="在ovs学习过程中，如果自己想要安装一个ovs交换机其实一条简单的命令 apt  install openvswitch 就可以了，但是这种方法只能安装低版本的ovs。在特殊情况下需要安装指定版本，例如需要下发meters表时需要ovs2.8以上的版本，那么就需要下载安装包手动安装。看似一个复杂的过程，其实也是比较简单的。下面就一起来看看如果手动安装一个指定版本ovs交换机。">
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Open vSwitch系列二 安装open vSwitch">
-<meta property="og:url" content="http:&#x2F;&#x2F;blog.c-x-l.club&#x2F;2019&#x2F;12&#x2F;17&#x2F;OpenvSwitch&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;blog.c-x-l.club&#x2F;posts.bak&#x2F;OpenvSwitch.html">
 <meta property="og:site_name" content="C·liberty.blog">
 <meta property="og:description" content="在ovs学习过程中，如果自己想要安装一个ovs交换机其实一条简单的命令 apt  install openvswitch 就可以了，但是这种方法只能安装低版本的ovs。在特殊情况下需要安装指定版本，例如需要下发meters表时需要ovs2.8以上的版本，那么就需要下载安装包手动安装。看似一个复杂的过程，其实也是比较简单的。下面就一起来看看如果手动安装一个指定版本ovs交换机。">
 <meta property="og:locale" content="zh_CN">
@@ -62,7 +62,7 @@
 <meta property="article:tag" content="Open vSwitch">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://blog.c-x-l.club/2019/12/17/OpenvSwitch/">
+<link rel="canonical" href="http://blog.c-x-l.club/posts.bak/OpenvSwitch">
 
 
 <script id="page-configurations">
@@ -70,11 +70,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: true
+    isPost: false
   };
 </script>
 
-  <title>Open vSwitch系列二 安装open vSwitch | C·liberty.blog</title>
+  <title>Open vSwitch系列二 安装open vSwitch | C·liberty.blog
+  </title>
   
 
 
@@ -192,54 +193,34 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+  
+  
 
           <div class="content">
             
 
   <div class="posts-expand">
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.c-x-l.club/2019/12/17/OpenvSwitch/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="艰难的生活永无止境，但因此，生长也无止境。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C·liberty.blog">
-    </span>
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          Open vSwitch系列二 安装open vSwitch
-        </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
+<h2 class="post-title" itemprop="name headline">Open vSwitch系列二 安装open vSwitch
+</h2>
 
-              <time title="创建时间：2019-12-17 00:00:00 / 修改时间：21:05:41" itemprop="dateCreated datePublished" datetime="2019-12-17T00:00:00+08:00">2019-12-17</time>
-            </span>
+<div class="post-meta">
+  
 
-          
+</div>
 
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
-        <p>在ovs学习过程中，如果自己想要安装一个ovs交换机其实一条简单的命令 apt  install openvswitch 就可以了，但是这种方法只能安装低版本的ovs。在特殊情况下需要安装指定版本，例如需要下发meters表时需要ovs2.8以上的版本，那么就需要下载安装包手动安装。看似一个复杂的过程，其实也是比较简单的。下面就一起来看看如果手动安装一个指定版本ovs交换机。</p>
+      
+      
+      <div class="post-body">
+          <p>在ovs学习过程中，如果自己想要安装一个ovs交换机其实一条简单的命令 apt  install openvswitch 就可以了，但是这种方法只能安装低版本的ovs。在特殊情况下需要安装指定版本，例如需要下发meters表时需要ovs2.8以上的版本，那么就需要下载安装包手动安装。看似一个复杂的过程，其实也是比较简单的。下面就一起来看看如果手动安装一个指定版本ovs交换机。</p>
 <a id="more"></a>
 <p style: size:50px;><b>Open vSwitch系列二 安装open vSwitch</b></p>
 
@@ -290,46 +271,16 @@
 <h3 id="7、启动vsftpd"><a href="#7、启动vsftpd" class="headerlink" title="7、启动vsftpd"></a>7、启动vsftpd</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/vsftpd start</span><br></pre></td></tr></table></figure>
 <h3 id="8、检查"><a href="#8、检查" class="headerlink" title="8、检查"></a>8、检查</h3><p>ftp 127.0.0.1<br>输入用户名密码登录,然后使用put命令上传文件<br>put a.txt<br>dir检查文件上传成功即可.</p>
 
-    </div>
-
-    <div>
+      </div>
       
-        <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:12px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
-    
-</div>
+      
       
     </div>
     
+
     
     
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/SDL/" rel="tag"><i class="fa fa-tag"></i> # SDL</a>
-              <a href="/tags/ODL/" rel="tag"><i class="fa fa-tag"></i> # ODL</a>
-              <a href="/tags/Open-vSwitch/" rel="tag"><i class="fa fa-tag"></i> # Open vSwitch</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2019/03/03/excerpt.responsibility/" rel="prev" title="责任意味着什么">
-      <i class="fa fa-chevron-left"></i> 责任意味着什么
-    </a></div>
-      <div class="post-nav-item"></div>
-    </div>
-      </footer>
     
-  </article>
-  
-  
-  
-
   </div>
 
 
@@ -402,14 +353,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -460,7 +411,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10.9k字</span>
+  <span class="post-count">博客全站共2k字</span>
 </div>
         
 
