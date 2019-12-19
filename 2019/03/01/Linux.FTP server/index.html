@@ -334,28 +334,42 @@
       
 
       
-        <p>FTP服务器（File Transfer Protocol Server）是在互联网上提供文件存储和访问服务的计算机，它们依照FTP协议提供服务。 FTP是File Transfer Protocol(文件传输协议)。顾名思义，就是专门用来传输文件的协议。简单地说，支持FTP协议的服务器就是FTP服务器。<br><a id="more"></a></p>
-<p style:="" size:50px;=""><b>Centos7.2下搭建FTP服务器</b></p>
+        <p>FTP服务器（File Transfer Protocol Server）是在互联网上提供文件存储和访问服务的计算机，它们依照FTP协议提供服务。 FTP是File Transfer Protocol(文件传输协议)。顾名思义，就是专门用来传输文件的协议。简单地说，支持FTP协议的服务器就是FTP服务器。</p>
+<a id="more"></a>
+<p style: size:50px;><b>Centos7.2下搭建FTP服务器</b></p>
 
 <p>在搭建服务器之前检查yum源，或者连通网络设置一些正规的源</p>
 
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><h3 id="安装ftp-使用yum"><a href="#安装ftp-使用yum" class="headerlink" title="安装ftp-使用yum"></a>安装ftp-使用yum</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
+
 <h3 id="启动ftp服务-默认为21端口"><a href="#启动ftp服务-默认为21端口" class="headerlink" title="启动ftp服务-默认为21端口"></a>启动ftp服务-默认为21端口</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start vsftpd</span><br></pre></td></tr></table></figure>
 <h3 id="查看端口是否占用"><a href="#查看端口是否占用" class="headerlink" title="查看端口是否占用"></a>查看端口是否占用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -nltp | grep 21</span><br></pre></td></tr></table></figure>
-<h2 id="匿名访问"><a href="#匿名访问" class="headerlink" title="匿名访问"></a>匿名访问</h2><p>以上内容没问题后，访问<a href="ftp://xxx.xxx.xxx.xxx即可" target="_blank" rel="noopener">ftp://xxx.xxx.xxx.xxx即可</a></p>
+
+<h2 id="匿名访问"><a href="#匿名访问" class="headerlink" title="匿名访问"></a>匿名访问</h2><p>以上内容没问题后，访问ftp://xxx.xxx.xxx.xxx即可</p>
 
 <h2 id="本地用户登录"><a href="#本地用户登录" class="headerlink" title="本地用户登录"></a>本地用户登录</h2><h3 id="配置FTP-权限"><a href="#配置FTP-权限" class="headerlink" title="配置FTP 权限"></a>配置FTP 权限</h3><p>&emsp;了解 VSFTP 配置,vsftpd 的配置目录为 /etc/vsftpd，包含下列的配置文件：<br>&emsp;&emsp;vsftpd.conf 为主要配置文件<br>&emsp;&emsp;ftpusers 配置禁止访问 FTP 服务器的用户列表<br>&emsp;&emsp;user_list 配置用户访问控制</p>
 <h3 id="阻止匿名访问和切换根目录"><a href="#阻止匿名访问和切换根目录" class="headerlink" title="阻止匿名访问和切换根目录"></a>阻止匿名访问和切换根目录</h3><p>&emsp;编辑 /etc/vsftpd/vsftpd.conf，找到下面两处配置并修改：<br>&emsp;# 禁用匿名用户<br>&emsp;anonymous_enable=NO<br>&emsp;# 禁止切换根目录<br>&emsp;chroot_local_user=YES</p>
 <h3 id="重启FTP服务"><a href="#重启FTP服务" class="headerlink" title="重启FTP服务"></a>重启FTP服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart vsftp</span><br></pre></td></tr></table></figure>
+
 <h3 id="创建-FTP-用户"><a href="#创建-FTP-用户" class="headerlink" title="创建 FTP 用户"></a>创建 FTP 用户</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 创建用户ftpuser</span><br><span class="line">useradd ftpuser</span><br><span class="line">// 为用户设置密码</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"ftppassword"</span> | passwd ftpuser --stdin</span><br></pre></td></tr></table></figure>
-<h3 id="限制该用户仅能通过-FTP-访问"><a href="#限制该用户仅能通过-FTP-访问" class="headerlink" title="限制该用户仅能通过 FTP 访问"></a>限制该用户仅能通过 FTP 访问</h3><p>&emsp; 限制用户 ftpuser 只能通过 FTP 访问服务器，而不能直接登录服务器：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">usermod -s /sbin/nologin ftpuser</span><br></pre></td></tr></table></figure></p>
-<h3 id="为用户分配主目录"><a href="#为用户分配主目录" class="headerlink" title="为用户分配主目录"></a>为用户分配主目录</h3><p>&emsp; 为用户 ftpuser 创建主目录并约定：<br>&emsp;&emsp; /data/ftp 为主目录, 该目录不可上传文件<br>&emsp;&emsp; /data/ftp/pub 文件只能上传到该目录下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /data/ftp/pub</span><br><span class="line">// 创建登录欢迎文件</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Welcome to use FTP service."</span> &gt; /data/ftp/welcome.txt</span><br><span class="line">// 设置访问权限</span><br><span class="line">chmod a-w /data/ftp &amp;&amp; chmod 777 -R /data/ftp/pub</span><br></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp; 设置为用户的主目录：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">usermod -d /data/ftp ftpuser</span><br></pre></td></tr></table></figure></p>
+
+<h3 id="限制该用户仅能通过-FTP-访问"><a href="#限制该用户仅能通过-FTP-访问" class="headerlink" title="限制该用户仅能通过 FTP 访问"></a>限制该用户仅能通过 FTP 访问</h3><p>&emsp; 限制用户 ftpuser 只能通过 FTP 访问服务器，而不能直接登录服务器：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">usermod -s /sbin/nologin ftpuser</span><br></pre></td></tr></table></figure>
+<h3 id="为用户分配主目录"><a href="#为用户分配主目录" class="headerlink" title="为用户分配主目录"></a>为用户分配主目录</h3><p>&emsp; 为用户 ftpuser 创建主目录并约定：<br>&emsp;&emsp; /data/ftp 为主目录, 该目录不可上传文件<br>&emsp;&emsp; /data/ftp/pub 文件只能上传到该目录下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /data/ftp/pub</span><br><span class="line">// 创建登录欢迎文件</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Welcome to use FTP service."</span> &gt; /data/ftp/welcome.txt</span><br><span class="line">// 设置访问权限</span><br><span class="line">chmod a-w /data/ftp &amp;&amp; chmod 777 -R /data/ftp/pub</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp; 设置为用户的主目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">usermod -d /data/ftp ftpuser</span><br></pre></td></tr></table></figure>
+
+
 <h2 id="虚拟用户登录"><a href="#虚拟用户登录" class="headerlink" title="虚拟用户登录"></a>虚拟用户登录</h2><h3 id="添加虚拟用户口令文件"><a href="#添加虚拟用户口令文件" class="headerlink" title="添加虚拟用户口令文件"></a>添加虚拟用户口令文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/vsftpd/vftpuser.txt</span><br></pre></td></tr></table></figure>
 <p>添加虚拟用户名和密码，一行用户名，一行密码，以此类推。奇数行为用户名，偶数行为密码。<br>&emsp;bobyuan     // 用户名<br>&emsp;123456      // 密码<br>&emsp;markwang    //用户名<br>&emsp;123456      //密码</p>
-<h3 id="生成虚拟用户口令认证文件"><a href="#生成虚拟用户口令认证文件" class="headerlink" title="生成虚拟用户口令认证文件"></a>生成虚拟用户口令认证文件</h3><p>&emsp;将刚添加的vftpuser.txt虚拟用户口令文件转换成系统识别的口令认证文件。首先查看系统有没有安装生成口令认证文件所需的软件db4-utils。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa |grep db4-utils</span><br></pre></td></tr></table></figure></p>
-<p>如果没有则需要单独安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh db4-utils-4.3.29-9.fc6.i386.rpm</span><br></pre></td></tr></table></figure></p>
-<p></p><p>下面使用db_load命令生成虚拟用户口令认证文件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db_load -T -t <span class="built_in">hash</span> -f /etc/vsftpd/vftpuser.txt/etc/vsftpd/vftpuser.db</span><br></pre></td></tr></table></figure></p>
+<h3 id="生成虚拟用户口令认证文件"><a href="#生成虚拟用户口令认证文件" class="headerlink" title="生成虚拟用户口令认证文件"></a>生成虚拟用户口令认证文件</h3><p>&emsp;将刚添加的vftpuser.txt虚拟用户口令文件转换成系统识别的口令认证文件。首先查看系统有没有安装生成口令认证文件所需的软件db4-utils。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa |grep db4-utils</span><br></pre></td></tr></table></figure>
+<p>如果没有则需要单独安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh db4-utils-4.3.29-9.fc6.i386.rpm</span><br></pre></td></tr></table></figure>
+<p>下面使用db_load命令生成虚拟用户口令认证文件。
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db_load -T -t <span class="built_in">hash</span> -f /etc/vsftpd/vftpuser.txt/etc/vsftpd/vftpuser.db</span><br></pre></td></tr></table></figure>
+
 <h3 id="编辑vsftpd的PAM认证文件"><a href="#编辑vsftpd的PAM认证文件" class="headerlink" title="编辑vsftpd的PAM认证文件"></a>编辑vsftpd的PAM认证文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/pam.d/vsftpd</span><br></pre></td></tr></table></figure>
 <p>将里面其他的都注释掉，添加下面这两行：<br>&emsp;&emsp;auth required /lib/security/pam_userdb.so db=/etc/vsftpd/vftpuser<br>&emsp;&emsp;account required /lib/security/pam_userdb.so db=/etc/vsftpd/vftpuser</p>
 <p>注:64位系统需使用下面的两行<br>&emsp;&emsp;auth required /lib64/security/pam_userdb.so db=/etc/vsftpd/vftpuser<br>&emsp;&emsp;account required /lib64/security/pam_userdb.so db=/etc/vsftpd/vftpuser</p>
