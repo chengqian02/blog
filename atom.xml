@@ -5,16 +5,16 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://blog.c-x-l.club/"/>
   <updated>2019-12-17T13:05:41.748Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://blog.c-x-l.club/</id>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
     <title>Open vSwitch系列二 安装open vSwitch</title>
-    <link href="http://yoursite.com/2019/12/17/OpenvSwitch/"/>
-    <id>http://yoursite.com/2019/12/17/OpenvSwitch/</id>
+    <link href="http://blog.c-x-l.club/2019/12/17/OpenvSwitch/"/>
+    <id>http://blog.c-x-l.club/2019/12/17/OpenvSwitch/</id>
     <published>2019-12-16T16:00:00.000Z</published>
     <updated>2019-12-17T13:05:41.748Z</updated>
     
@@ -28,18 +28,18 @@
     
     
     
-      <category term="SDL" scheme="http://yoursite.com/tags/SDL/"/>
+      <category term="SDL" scheme="http://blog.c-x-l.club/tags/SDL/"/>
     
-      <category term="ODL" scheme="http://yoursite.com/tags/ODL/"/>
+      <category term="ODL" scheme="http://blog.c-x-l.club/tags/ODL/"/>
     
-      <category term="Open vSwitch" scheme="http://yoursite.com/tags/Open-vSwitch/"/>
+      <category term="Open vSwitch" scheme="http://blog.c-x-l.club/tags/Open-vSwitch/"/>
     
   </entry>
   
   <entry>
     <title>责任意味着什么</title>
-    <link href="http://yoursite.com/2019/03/03/excerpt.responsibility/"/>
-    <id>http://yoursite.com/2019/03/03/excerpt.responsibility/</id>
+    <link href="http://blog.c-x-l.club/2019/03/03/excerpt.responsibility/"/>
+    <id>http://blog.c-x-l.club/2019/03/03/excerpt.responsibility/</id>
     <published>2019-03-02T16:00:00.000Z</published>
     <updated>2019-03-03T15:33:05.416Z</updated>
     
@@ -53,14 +53,14 @@
     
     
     
-      <category term="excerpt" scheme="http://yoursite.com/tags/excerpt/"/>
+      <category term="excerpt" scheme="http://blog.c-x-l.club/tags/excerpt/"/>
     
   </entry>
   
   <entry>
     <title>Centos7.2下搭建FTP服务器</title>
-    <link href="http://yoursite.com/2019/03/01/Linux.FTP%20server/"/>
-    <id>http://yoursite.com/2019/03/01/Linux.FTP%20server/</id>
+    <link href="http://blog.c-x-l.club/2019/03/01/Linux.FTP%20server/"/>
+    <id>http://blog.c-x-l.club/2019/03/01/Linux.FTP%20server/</id>
     <published>2019-02-28T16:00:00.000Z</published>
     <updated>2019-03-03T15:22:33.707Z</updated>
     
@@ -74,18 +74,18 @@
     
     
     
-      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="服务器" scheme="http://blog.c-x-l.club/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://blog.c-x-l.club/tags/Linux/"/>
     
-      <category term="Centos" scheme="http://yoursite.com/tags/Centos/"/>
+      <category term="Centos" scheme="http://blog.c-x-l.club/tags/Centos/"/>
     
   </entry>
   
   <entry>
     <title>hexo+github_page搭建博客</title>
-    <link href="http://yoursite.com/2018/10/13/hexo+github/"/>
-    <id>http://yoursite.com/2018/10/13/hexo+github/</id>
+    <link href="http://blog.c-x-l.club/2018/10/13/hexo+github/"/>
+    <id>http://blog.c-x-l.club/2018/10/13/hexo+github/</id>
     <published>2018-10-12T16:00:00.000Z</published>
     <updated>2018-10-26T05:21:48.189Z</updated>
     
@@ -99,7 +99,7 @@
     
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://blog.c-x-l.club/tags/hexo/"/>
     
   </entry>
   
