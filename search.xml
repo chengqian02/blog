@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>VS Code搭建c语言环境</title>
-    <url>/2019/12/21/VS%20Code_c%20language/</url>
+    <url>/2019/12/21/VSCode_clanguage/</url>
     <content><![CDATA[<p><strong>VS Code搭建c语言环境总体流程：</strong></p>
 <ol>
 <li>下载安装vscode（自行安装）</li>
@@ -18,22 +18,26 @@
 <li>安装、重启VS Code</li>
 </ul>
 <h2 id="安装编译环境mingw-w64"><a href="#安装编译环境mingw-w64" class="headerlink" title="安装编译环境mingw-w64"></a>安装编译环境mingw-w64</h2><ul>
-<li><p><a href="https://sourceforge.net/projects/mingw-w64/files/" target="_blank" rel="noopener">下载MinGW</a></p>
-<blockquote>
+<li><a href="https://sourceforge.net/projects/mingw-w64/files/" target="_blank" rel="noopener">下载MinGW</a><blockquote>
 <p>因为windows下vscode不直接具备对于C语言的编译调试工具，所以要下载集成gcc等工具的MinGw以提供扩展支持。</p>
 </blockquote>
 </li>
-<li><p>配置系统环境变量</p>
-</li>
+</ul>
+<p><img src="/2019/12/21/VSCode_clanguage/mingw.png" alt="图片加载失败"></p>
+<ul>
+<li>配置系统环境变量</li>
 </ul>
 <p>打开我的电脑-属性-高级系统设置-高级-环境变量</p>
 <p>在系统变量中找到Path变量，选择编辑(没有则新建)，将之前mingw解压后目录下bin文件夹目录添加至其中，注意windows 7及以前版本需与原值用英文分号隔开，windows8及以上版本选择新建即可。</p>
+<p><img src="/2019/12/21/VSCode_clanguage/bin.png" alt="图片加载失败"></p>
 <p>然后在系统变量中找到include变量(没有则新建一个，不区分大小写)，编辑，将原mingw解压目录下include文件夹目录添加进去。</p>
+<p><img src="/2019/12/21/VSCode_clanguage/include.png" alt="图片加载失败"></p>
 <ul>
 <li>cmd测试</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gcc -v</span><br></pre></td></tr></table></figure>
 
+<p><img src="/2019/12/21/VSCode_clanguage/gcc.png" alt="图片加载失败"></p>
 <h2 id="配置VS-Code"><a href="#配置VS-Code" class="headerlink" title="配置VS Code"></a>配置VS Code</h2><h3 id="配置智能提示"><a href="#配置智能提示" class="headerlink" title="配置智能提示"></a>配置智能提示</h3><ul>
 <li>编写一个测试文件demo.c,点击引入的标准库下的“提示灯”,生成c_cpp_properties.json文件</li>
 <li>编辑c_cpp_properties.json</li>
