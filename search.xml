@@ -100,7 +100,7 @@
 <p>下面使用db_load命令生成虚拟用户口令认证文件。
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">db_load -T -t <span class="built_in">hash</span> -f /etc/vsftpd/vftpuser.txt/etc/vsftpd/vftpuser.db</span><br></pre></td></tr></table></figure>
 
-<h3 id="编辑vsftpd的PAM认证文件"><a href="#编辑vsftpd的PAM认证文件" class="headerlink" title="编辑vsftpd的PAM认证文件"></a>编辑vsftpd的PAM认证文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/pam.d/vsftpd</span><br></pre></td></tr></table></figure>
+</p><h3 id="编辑vsftpd的PAM认证文件"><a href="#编辑vsftpd的PAM认证文件" class="headerlink" title="编辑vsftpd的PAM认证文件"></a>编辑vsftpd的PAM认证文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/pam.d/vsftpd</span><br></pre></td></tr></table></figure>
 <p>将里面其他的都注释掉，添加下面这两行：<br>&emsp;&emsp;auth required /lib/security/pam_userdb.so db=/etc/vsftpd/vftpuser<br>&emsp;&emsp;account required /lib/security/pam_userdb.so db=/etc/vsftpd/vftpuser</p>
 <p>注:64位系统需使用下面的两行<br>&emsp;&emsp;auth required /lib64/security/pam_userdb.so db=/etc/vsftpd/vftpuser<br>&emsp;&emsp;account required /lib64/security/pam_userdb.so db=/etc/vsftpd/vftpuser</p>
 <h3 id="配置vsftpd-conf（设置虚拟用户配置项）"><a href="#配置vsftpd-conf（设置虚拟用户配置项）" class="headerlink" title="配置vsftpd.conf（设置虚拟用户配置项）"></a>配置vsftpd.conf（设置虚拟用户配置项）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/vsftpd/vsftpd.conf</span><br></pre></td></tr></table></figure>
@@ -118,7 +118,7 @@
   </entry>
   <entry>
     <title>hexo+github_page搭建博客</title>
-    <url>/2018/10/13/hexo+github/</url>
+    <url>/2018/10/13/hexo-github/</url>
     <content><![CDATA[<p>Hexo 是一个快速、简洁且高效的博客框架，可托管于github pages，可免去维护服务器的麻烦，博主们可更专注于内容的创作。</p>
 <a id="more"></a>
 <p style: size:50px;><b>使用Hexo+github搭建属于自己的博客</b></p>
@@ -135,10 +135,10 @@
 
 
 <p>新建完成之后该目录的目录结构如下:<br>&emsp;&emsp;_config.yml     # 网站的 配置 信息<br>&emsp;&emsp;package.json          # 应用程序的信息<br>&emsp;&emsp;scaffolds             # 模板文件夹<br>&emsp;&emsp;source                # 博文源文件目录<br>&emsp;&emsp;_drafts               # 草稿文件夹<br>&emsp;&emsp;_posts                # 博文文件夹<br>&emsp;&emsp;themes                # 主题文件夹</p>
-<p>&emsp;再执行以下命令，访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 即可快速体验Hexo</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://pgnfycdbr.bkt.clouddn.com/static/images/git+githubpage_hexo.png" alt="hexo"></p>
+<p>&emsp;再执行以上命令，访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 即可快速体验Hexo</p>
+<p><img src="/2018/10/13/hexo-github/hexo.jpg" alt="图片加载失败"></p>
 <h2 id="根据-Hexo文档-对网站做一些简单的配置，然后修改主题为next。更多主题可到”hexo主题网站查看“。"><a href="#根据-Hexo文档-对网站做一些简单的配置，然后修改主题为next。更多主题可到”hexo主题网站查看“。" class="headerlink" title="根据 Hexo文档 对网站做一些简单的配置，然后修改主题为next。更多主题可到”hexo主题网站查看“。"></a>根据 Hexo文档 对网站做一些简单的配置，然后修改主题为next。更多主题可到”<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo主题网站查看</a>“。</h2><p>&emsp;安装</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> your-hexo-site</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 
@@ -160,7 +160,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
 
 <p>&emsp;&emsp;如果不存在就没有关系，如果存在的话，直接删除.ssh文件夹里面所有文件： </p>
-<p><img src="http://pgnfycdbr.bkt.clouddn.com/static/images/git+githubpage_sshcreate.png" alt="ssh.create"></p>
+<p><img src="/2018/10/13/hexo-github/sshcreate.jpg" alt="图片加载失败"></p>
 <p>&emsp;&emsp;设置name和emai</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"&lt;your name&gt;"</span></span><br><span class="line">git config --global user.email <span class="string">"&lt;your email&gt;"</span></span><br></pre></td></tr></table></figure>
 
@@ -175,8 +175,8 @@
 
 <p>然后拷贝key</p>
 <p>&emsp;&emsp;在Github上添加SSH密钥</p>
-<p>&emsp;&emsp;在<b><a href="https://github.com/settings/keys" target="_blank" rel="noopener">https://github.com/settings/keys</a>下 add new ssh key</p>
-<p><img src="http://pgnfycdbr.bkt.clouddn.com/static/images/git+githubpage_sshconfig.png" alt="ssh"></p>
+<p>&emsp;&emsp;在<b><a href="https://github.com/settings/keys" target="_blank" rel="noopener">https://github.com/settings/keys</a>下 add new ssh key</b></p>
+<p><img src="/2018/10/13/hexo-github/ssh.jpg" alt="图片加载失败"></p>
 <p>&emsp;&emsp;然后title随便取个名字，key 就是上面我们拷贝的内容，<br>&emsp;&emsp;好了，最后我们测试一下看是否配置成功。</p>
 <p>输入以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure>

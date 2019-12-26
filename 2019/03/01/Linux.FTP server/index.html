@@ -281,7 +281,7 @@
 <p>下面使用db_load命令生成虚拟用户口令认证文件。
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db_load -T -t <span class="built_in">hash</span> -f /etc/vsftpd/vftpuser.txt/etc/vsftpd/vftpuser.db</span><br></pre></td></tr></table></figure>
 
-<h3 id="编辑vsftpd的PAM认证文件"><a href="#编辑vsftpd的PAM认证文件" class="headerlink" title="编辑vsftpd的PAM认证文件"></a>编辑vsftpd的PAM认证文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/pam.d/vsftpd</span><br></pre></td></tr></table></figure>
+</p><h3 id="编辑vsftpd的PAM认证文件"><a href="#编辑vsftpd的PAM认证文件" class="headerlink" title="编辑vsftpd的PAM认证文件"></a>编辑vsftpd的PAM认证文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/pam.d/vsftpd</span><br></pre></td></tr></table></figure>
 <p>将里面其他的都注释掉，添加下面这两行：<br>&emsp;&emsp;auth required /lib/security/pam_userdb.so db=/etc/vsftpd/vftpuser<br>&emsp;&emsp;account required /lib/security/pam_userdb.so db=/etc/vsftpd/vftpuser</p>
 <p>注:64位系统需使用下面的两行<br>&emsp;&emsp;auth required /lib64/security/pam_userdb.so db=/etc/vsftpd/vftpuser<br>&emsp;&emsp;account required /lib64/security/pam_userdb.so db=/etc/vsftpd/vftpuser</p>
 <h3 id="配置vsftpd-conf（设置虚拟用户配置项）"><a href="#配置vsftpd-conf（设置虚拟用户配置项）" class="headerlink" title="配置vsftpd.conf（设置虚拟用户配置项）"></a>配置vsftpd.conf（设置虚拟用户配置项）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/vsftpd/vsftpd.conf</span><br></pre></td></tr></table></figure>
@@ -319,7 +319,7 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2018/10/13/hexo+github/" rel="prev" title="hexo+github_page搭建博客">
+    <a href="/2018/10/13/hexo-github/" rel="prev" title="hexo+github_page搭建博客">
       <i class="fa fa-chevron-left"></i> hexo+github_page搭建博客
     </a></div>
       <div class="post-nav-item">
