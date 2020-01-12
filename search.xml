@@ -44,7 +44,7 @@
 <h3 id="4、重新启动-httpd-服务"><a href="#4、重新启动-httpd-服务" class="headerlink" title="4、重新启动 httpd 服务"></a>4、重新启动 httpd 服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart httpd</span><br></pre></td></tr></table></figure>
 
 <h3 id="5、测试："><a href="#5、测试：" class="headerlink" title="5、测试："></a>5、测试：</h3><p>在主机上进行测试：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://192.168.174.130/git/test.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.sslVerify <span class="literal">false</span>        // 忽略证书</span><br><span class="line">git <span class="built_in">clone</span> https://192.168.174.130/git/test.git</span><br></pre></td></tr></table></figure>
 </P></P>]]></content>
       <tags>
         <tag>Git</tag>
