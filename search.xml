@@ -6,8 +6,6 @@
     <content><![CDATA[<p>面向对象编程——Object Oriented Programming，简称OOP，是一种程序设计思想。OOP把对象作为程序的基本单元，一个对象包含了数据和操作数据的函数。<br>在Python中，所有数据类型都可以视为对象，当然也可以自定义对象。自定义的对象数据类型就是面向对象中的类（Class）的概念。</p>
 <a id="more"></a>
 
-<p style: size:50px;><b>Python系列之面向对象编程</b></p>
-
 <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a><strong>简述</strong></h2><h3 id="面向对象三大特性："><a href="#面向对象三大特性：" class="headerlink" title="面向对象三大特性："></a>面向对象三大特性：</h3><ul>
 <li><strong><a href="#基础语法(封装)">封装</a></strong> 根据职责 将属性 和 方法封装到一个抽象的类中</li>
 <li><strong>[继承](# 继承)</strong> 实现代码的重用，相同的代码不需要重复的编写</li>
